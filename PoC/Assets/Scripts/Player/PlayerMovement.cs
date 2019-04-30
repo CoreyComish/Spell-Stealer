@@ -2,7 +2,7 @@
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 6f;
+    public float speed;
 
     Vector3 movement;
     Animator anim;
@@ -21,6 +21,11 @@ public class PlayerMovement : MonoBehaviour
     {
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
+        if (h != 0.0f || v != 0.0f)
+        {
+            anim.SetFloat("Speed", 3.0f);
+        }
+        else { anim.SetFloat("Speed", 0.0f); }
         Move(h, v);
         Turning();
     }
