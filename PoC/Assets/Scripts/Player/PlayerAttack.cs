@@ -14,7 +14,7 @@ public class PlayerAttack : MonoBehaviour
     LineRenderer spellLine;
     Vector3 pos;
     Light spellLight;
-    float effectsDisplayTime = 0.25f;
+    float effectsDisplayTime = 0.15f;
 
 
     void Awake ()

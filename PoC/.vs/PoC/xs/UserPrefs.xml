@@ -1,8 +1,9 @@
 ﻿<Properties StartupConfiguration="{C376950F-29ED-4561-8C6C-8BF18B48288C}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player/PlayerAttack.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player/PlayerHealth.cs">
     <Files>
       <File FileName="Assets/Scripts/Player/PlayerMovement.cs" Line="16" Column="9" />
-      <File FileName="Assets/Scripts/Player/PlayerAttack.cs" Line="76" Column="53" />
+      <File FileName="Assets/Scripts/Player/PlayerAttack.cs" Line="17" Column="36" />
+      <File FileName="Assets/Scripts/Player/PlayerHealth.cs" Line="7" Column="42" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
