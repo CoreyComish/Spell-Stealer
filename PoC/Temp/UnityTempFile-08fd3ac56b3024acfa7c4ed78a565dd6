@@ -342,6 +342,7 @@
 "Assets/NatureStarterKit2/Standard Assets/Effects/ImageEffects/Scripts/VignetteAndChromaticAberration.cs"
 "Assets/NatureStarterKit2/Standard Assets/Effects/ImageEffects/Scripts/Vortex.cs"
 "Assets/Scripts/Camera/CameraFollow.cs"
+"Assets/Scripts/Player/PlayerAttack.cs"
 "Assets/Scripts/Player/PlayerMovement.cs"
 "Assets/unity-chan!/Unity-chan! Model/Scripts/AutoBlink.cs"
 "Assets/unity-chan!/Unity-chan! Model/Scripts/CameraController.cs"
