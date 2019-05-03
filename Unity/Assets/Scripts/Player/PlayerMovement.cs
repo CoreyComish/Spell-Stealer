@@ -2,7 +2,7 @@
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed;
+    public float speed = 4f;
 
     Vector3 movement;
     Animator anim;
@@ -21,11 +21,15 @@ public class PlayerMovement : MonoBehaviour
     {
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
+
+        // if moving, trigger locomotion animation
         if (h != 0.0f || v != 0.0f)
         {
-            anim.SetFloat("Speed", 3.0f);
+            anim.SetFloat("Speed", 1.0f);
         }
         else { anim.SetFloat("Speed", 0.0f); }
+
+
         Move(h, v);
         Turning();
     }
