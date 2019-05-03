@@ -526,7 +526,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400328, guid: 49f2055d53eeb4e5a92af590a44bddee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.23
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 400328, guid: 49f2055d53eeb4e5a92af590a44bddee, type: 3}
       propertyPath: m_LocalPosition.z
@@ -702,9 +702,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea89fcc27527845848d43166f1fe986d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePerSpell: 20
   timeBetweenSpells: 1
-  range: 100
+  snowball: {fileID: 7320790777012984211, guid: 1d0192bf20eeb4b1b8efb1d087797922,
+    type: 3}
 --- !u!120 &959528948
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -712,7 +712,7 @@ LineRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 959528945}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1409,75 +1409,6 @@ Transform:
   m_Father: {fileID: 505773763}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &2097211946
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 438866832403970949, guid: e6c1a172d1ea144f28662eb4902a2b54,
-        type: 3}
-      propertyPath: m_Name
-      value: Demon Blade Lord A Variant
-      objectReference: {fileID: 0}
-    - target: {fileID: 433384593348233993, guid: e6c1a172d1ea144f28662eb4902a2b54,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 433384593348233993, guid: e6c1a172d1ea144f28662eb4902a2b54,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 433384593348233993, guid: e6c1a172d1ea144f28662eb4902a2b54,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 433384593348233993, guid: e6c1a172d1ea144f28662eb4902a2b54,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 433384593348233993, guid: e6c1a172d1ea144f28662eb4902a2b54,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.9659258
-      objectReference: {fileID: 0}
-    - target: {fileID: 433384593348233993, guid: e6c1a172d1ea144f28662eb4902a2b54,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 433384593348233993, guid: e6c1a172d1ea144f28662eb4902a2b54,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.2588191
-      objectReference: {fileID: 0}
-    - target: {fileID: 433384593348233993, guid: e6c1a172d1ea144f28662eb4902a2b54,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 433384593348233993, guid: e6c1a172d1ea144f28662eb4902a2b54,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 433384593348233993, guid: e6c1a172d1ea144f28662eb4902a2b54,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -150
-      objectReference: {fileID: 0}
-    - target: {fileID: 433384593348233993, guid: e6c1a172d1ea144f28662eb4902a2b54,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e6c1a172d1ea144f28662eb4902a2b54, type: 3}
 --- !u!1 &2113579554
 GameObject:
   m_ObjectHideFlags: 0

@@ -70,13 +70,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46d7928946ac149079d7e865fb524121, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 5
+  timeBetweenAttacks: 2
   attackDamage: 10
   attackAnim: Attack01
   snowball: {fileID: 7320790777012984211, guid: 1d0192bf20eeb4b1b8efb1d087797922,
     type: 3}
   spellSpawn: {fileID: 437769102948425707}
-  spellDistance: 10
+  spellDistance: 20
 --- !u!195 &1886812570
 NavMeshAgent:
   m_ObjectHideFlags: 0

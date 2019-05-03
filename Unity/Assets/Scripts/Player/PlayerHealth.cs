@@ -60,7 +60,7 @@ public class PlayerHealth : MonoBehaviour
     void Death ()
     {
         isDead = true;
-        playerAttack.DisableEffects ();
+        playerAttack.DisableAllEffects();
         anim.SetTrigger ("Die");
         playerMovement.enabled = false;
         playerAttack.enabled = false;
