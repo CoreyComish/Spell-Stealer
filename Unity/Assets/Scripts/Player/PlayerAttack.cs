@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using System.Collections;
 
+enum Spells
+{
+    ray,
+    snowball
+}
+
+
 [System.Serializable]
 public class SnowballSpell
 {
@@ -68,7 +75,7 @@ public class PlayerAttack : MonoBehaviour
     public float timeBetweenSpells = 0.15f;
 
     // Spells
-    Dictionary<string, bool> spellMap = new Dictionary<string, bool>();
+    public int activeSpell;
     RaySpell raySpell;
     SnowballSpell snowballSpell;
 
@@ -77,13 +84,12 @@ public class PlayerAttack : MonoBehaviour
 
     void Awake ()
     {
-        // Spell Map
-        spellMap.Add("ray", false);
-        spellMap.Add("snowball", true);
-
+    
         // General Properties
         shootableMask = LayerMask.GetMask ("Shootable");
         anim = GetComponent<Animator>();
+        activeSpell = (int)Spells.ray;
+        //activeSpell = (int)Spells.snowball;
 
         // Ray Spell Properties
         raySpell = new RaySpell();
@@ -105,12 +111,12 @@ public class PlayerAttack : MonoBehaviour
         {
             anim.SetBool("AttackL", true);
 
-            if (spellMap["ray"])
+            if (activeSpell == (int)Spells.ray)
             {
                 raySpell.ShootSpell(transform, shootableMask);
             }
 
-            else if (spellMap["snowball"])
+            else if (activeSpell == (int)Spells.snowball)
             {
                 Instantiate(snowball, 
                             snowballSpell.spellSpawn.position + new Vector3(0f, 0.5f,0f), 

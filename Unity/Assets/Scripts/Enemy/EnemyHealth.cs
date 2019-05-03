@@ -10,6 +10,8 @@ public class EnemyHealth : MonoBehaviour
     CapsuleCollider capsuleCollider;
     bool isDead;
 
+    public PlayerAttack playerAttack;
+
     void Awake ()
     {
         anim = GetComponent <Animator> ();
@@ -37,5 +39,9 @@ public class EnemyHealth : MonoBehaviour
         anim.SetTrigger ("Dead");
         GetComponent<UnityEngine.AI.NavMeshAgent>().enabled = false;
         Destroy(gameObject, 5f);
+
+
+        // Set Player attack to Snowball
+        playerAttack.activeSpell = (int)Spells.snowball;
     }
 }
