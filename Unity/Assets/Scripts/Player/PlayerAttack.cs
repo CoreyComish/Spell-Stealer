@@ -119,7 +119,7 @@ public class PlayerAttack : MonoBehaviour
             else if (activeSpell == (int)Spells.snowball)
             {
                 Instantiate(snowball, 
-                            snowballSpell.spellSpawn.position + new Vector3(0f, 0.5f,0f), 
+                            snowballSpell.spellSpawn.position + new Vector3(0f, 0.25f,0f), 
                             snowballSpell.spellSpawn.rotation);
             }
 

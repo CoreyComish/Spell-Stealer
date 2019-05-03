@@ -11,6 +11,8 @@ public class EnemyAttack : MonoBehaviour
     GameObject player;
     PlayerHealth playerHealth;
     EnemyHealth enemyHealth;
+    SphereCollider snowballHitbox;
+    CapsuleCollider playerHitbox;
     bool playerInRange;
     float timer;
 
@@ -25,6 +27,8 @@ public class EnemyAttack : MonoBehaviour
         playerHealth = player.GetComponent <PlayerHealth> ();
         enemyHealth = GetComponent<EnemyHealth>();
         anim = GetComponent <Animator> ();
+        snowballHitbox = snowball.GetComponent<SphereCollider>();
+        playerHitbox = GetComponent<CapsuleCollider>();
     }
 
     /*
@@ -64,12 +68,11 @@ public class EnemyAttack : MonoBehaviour
             Attack ();
         }
 
-        if(playerHealth.currentHealth <= 0)
+        if (playerHealth.currentHealth <= 0)
         {
             anim.SetTrigger ("PlayerDead");
         }
     }
-
 
     void Attack ()
     {
@@ -81,7 +84,17 @@ public class EnemyAttack : MonoBehaviour
 
             Instantiate(snowball, spellSpawn.position, spellSpawn.rotation);
 
-            //playerHealth.TakeDamage (attackDamage);
+            if (snowballHitbox.bounds.Intersects(playerHitbox.bounds))
+            {
+                playerHealth.TakeDamage(10);
+            }
+
+            /*
+            if (Vector3.Distance(transform.position, player.transform.position) < 10)
+            {
+                playerHealth.TakeDamage (attackDamage);
+            }
+            */
         }
     }
 }
