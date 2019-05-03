@@ -35,12 +35,11 @@ public class PlayerHealth : MonoBehaviour
         if(damaged)
         {
             damageImage.color = flashColour;
-            anim.SetBool("Damaged", true);
+            anim.SetTrigger("Damaged");
         }
         else
         {
             damageImage.color = Color.Lerp (damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
-            anim.SetBool("Damaged", false);
         }
         damaged = false;
     }
