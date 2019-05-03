@@ -358,3 +358,7 @@
 /Users/coreycomish/Documents/Computer_Science/CIS 410/Spell Stealer/obj/Debug/Assembly-CSharp.csproj.CopyComplete
 /Users/coreycomish/Documents/Computer_Science/CIS 410/Spell Stealer/obj/Debug/Assembly-CSharp.dll
 /Users/coreycomish/Documents/Computer_Science/CIS 410/Spell Stealer/obj/Debug/Assembly-CSharp.pdb
+/Users/coreycomish/Documents/Computer_Science/CIS 410/spell_stealer/PoC/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
+/Users/coreycomish/Documents/Computer_Science/CIS 410/spell_stealer/PoC/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache
+/Users/coreycomish/Documents/Computer_Science/CIS 410/spell_stealer/PoC/obj/Debug/Assembly-CSharp.dll
+/Users/coreycomish/Documents/Computer_Science/CIS 410/spell_stealer/PoC/obj/Debug/Assembly-CSharp.pdb

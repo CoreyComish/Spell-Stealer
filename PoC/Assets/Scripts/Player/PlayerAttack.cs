@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+
 public class PlayerAttack : MonoBehaviour
 {
     public int damagePerSpell = 20;
@@ -70,23 +71,19 @@ public class PlayerAttack : MonoBehaviour
         shootRay.origin = pos;
         shootRay.direction = transform.forward;
 
-        /*
         if(Physics.Raycast (shootRay, out shootHit, range, shootableMask))
         {
-            //EnemyHealth enemyHealth = shootHit.collider.GetComponent <EnemyHealth> ();
-            
-            if(enemyHealth != null)
+            EnemyHealth enemyHealth = shootHit.collider.GetComponent<EnemyHealth>();
+
+            if (enemyHealth != null)
             {
                 enemyHealth.TakeDamage(damagePerSpell, shootHit.point);
             }
-            gunLine.SetPosition (1, shootHit.point);
+            spellLine.SetPosition (1, shootHit.point);
         }
         else
         {
-            gunLine.SetPosition (1, shootRay.origin + shootRay.direction * range);
+            spellLine.SetPosition (1, shootRay.origin + shootRay.direction * range);
         }
-        */
-
-        spellLine.SetPosition(1, shootRay.origin + shootRay.direction * range);
     }
 }

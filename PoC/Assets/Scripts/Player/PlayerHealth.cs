@@ -65,6 +65,7 @@ public class PlayerHealth : MonoBehaviour
         anim.SetTrigger ("Die");
         playerMovement.enabled = false;
         playerAttack.enabled = false;
+        RestartLevel();
     }
 
 
