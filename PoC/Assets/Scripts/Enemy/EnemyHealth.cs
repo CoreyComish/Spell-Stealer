@@ -22,10 +22,11 @@ public class EnemyHealth : MonoBehaviour
         if (isDead)
             return;
         currentHealth -= amount;
-        if(currentHealth <= 0)
+        if (currentHealth <= 0)
         {
-            Death ();
+            Death();
         }
+        else { anim.SetTrigger("Hit"); }
     }
 
 
