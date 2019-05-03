@@ -82,17 +82,27 @@ public class EnemyAttack : MonoBehaviour
         {
             anim.SetTrigger(attackAnim);
 
-            Instantiate(snowball, spellSpawn.position, spellSpawn.rotation);
+            if (attackAnim == "Attack01")
+            {
+                Instantiate(snowball, spellSpawn.position, spellSpawn.rotation);
+            }
 
+            /*
             if (snowballHitbox.bounds.Intersects(playerHitbox.bounds))
             {
                 playerHealth.TakeDamage(10);
+            }
+            */
+
+            if (attackAnim != "Attack01")
+            {
+                playerHealth.TakeDamage(attackDamage);
             }
 
             /*
             if (Vector3.Distance(transform.position, player.transform.position) < 10)
             {
-                playerHealth.TakeDamage (attackDamage);
+                
             }
             */
         }

@@ -431,6 +431,92 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 875508595}
   smoothing: 8
+--- !u!1001 &699079255
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3355429809246875382, guid: fe76828eb7888405eb82f140a6176b0b,
+        type: 3}
+      propertyPath: m_Name
+      value: Demon Blade Lord C Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351938510854495866, guid: fe76828eb7888405eb82f140a6176b0b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351938510854495866, guid: fe76828eb7888405eb82f140a6176b0b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351938510854495866, guid: fe76828eb7888405eb82f140a6176b0b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351938510854495866, guid: fe76828eb7888405eb82f140a6176b0b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351938510854495866, guid: fe76828eb7888405eb82f140a6176b0b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9659258
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351938510854495866, guid: fe76828eb7888405eb82f140a6176b0b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351938510854495866, guid: fe76828eb7888405eb82f140a6176b0b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.2588191
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351938510854495866, guid: fe76828eb7888405eb82f140a6176b0b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351938510854495866, guid: fe76828eb7888405eb82f140a6176b0b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351938510854495866, guid: fe76828eb7888405eb82f140a6176b0b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351938510854495866, guid: fe76828eb7888405eb82f140a6176b0b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 966003201, guid: fe76828eb7888405eb82f140a6176b0b, type: 3}
+      propertyPath: snowball
+      value: 
+      objectReference: {fileID: 7320790777012984211, guid: 1d0192bf20eeb4b1b8efb1d087797922,
+        type: 3}
+    - target: {fileID: 966003201, guid: fe76828eb7888405eb82f140a6176b0b, type: 3}
+      propertyPath: spellSpawn
+      value: 
+      objectReference: {fileID: 1581985479}
+    - target: {fileID: 966003201, guid: fe76828eb7888405eb82f140a6176b0b, type: 3}
+      propertyPath: spellDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 966003201, guid: fe76828eb7888405eb82f140a6176b0b, type: 3}
+      propertyPath: timeBetweenAttacks
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fe76828eb7888405eb82f140a6176b0b, type: 3}
 --- !u!1 &716287147
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,6 +663,10 @@ PrefabInstance:
       propertyPath: damageImage
       value: 
       objectReference: {fileID: 1795988844}
+    - target: {fileID: 959528953, guid: 49f2055d53eeb4e5a92af590a44bddee, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49f2055d53eeb4e5a92af590a44bddee, type: 3}
 --- !u!4 &875508595 stripped
@@ -814,7 +904,7 @@ PrefabInstance:
     - target: {fileID: 433384593348233993, guid: e6c1a172d1ea144f28662eb4902a2b54,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.96
+      value: 16.6
       objectReference: {fileID: 0}
     - target: {fileID: 433384593348233993, guid: e6c1a172d1ea144f28662eb4902a2b54,
         type: 3}
@@ -824,7 +914,7 @@ PrefabInstance:
     - target: {fileID: 433384593348233993, guid: e6c1a172d1ea144f28662eb4902a2b54,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.68
+      value: 22.3
       objectReference: {fileID: 0}
     - target: {fileID: 433384593348233993, guid: e6c1a172d1ea144f28662eb4902a2b54,
         type: 3}
@@ -873,6 +963,10 @@ PrefabInstance:
     - target: {fileID: 1886812570, guid: e6c1a172d1ea144f28662eb4902a2b54, type: 3}
       propertyPath: m_Speed
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1886812567, guid: e6c1a172d1ea144f28662eb4902a2b54, type: 3}
+      propertyPath: spellDistance
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 437769102948425707, guid: e6c1a172d1ea144f28662eb4902a2b54,
         type: 3}
@@ -1185,6 +1279,98 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1546409754}
   m_CullTransparentMesh: 0
+--- !u!4 &1581985479 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 437769102948425707, guid: e6c1a172d1ea144f28662eb4902a2b54,
+    type: 3}
+  m_PrefabInstance: {fileID: 1260285131}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1662709949
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2681792950818510422, guid: f1efab439e1a94f0da32676cc381f0f5,
+        type: 3}
+      propertyPath: m_Name
+      value: Demon Blade Lord B Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676052457509529306, guid: f1efab439e1a94f0da32676cc381f0f5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676052457509529306, guid: f1efab439e1a94f0da32676cc381f0f5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676052457509529306, guid: f1efab439e1a94f0da32676cc381f0f5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676052457509529306, guid: f1efab439e1a94f0da32676cc381f0f5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676052457509529306, guid: f1efab439e1a94f0da32676cc381f0f5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9659258
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676052457509529306, guid: f1efab439e1a94f0da32676cc381f0f5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676052457509529306, guid: f1efab439e1a94f0da32676cc381f0f5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.2588191
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676052457509529306, guid: f1efab439e1a94f0da32676cc381f0f5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676052457509529306, guid: f1efab439e1a94f0da32676cc381f0f5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676052457509529306, guid: f1efab439e1a94f0da32676cc381f0f5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -150
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676052457509529306, guid: f1efab439e1a94f0da32676cc381f0f5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1643445149, guid: f1efab439e1a94f0da32676cc381f0f5, type: 3}
+      propertyPath: snowball
+      value: 
+      objectReference: {fileID: 7320790777012984211, guid: 1d0192bf20eeb4b1b8efb1d087797922,
+        type: 3}
+    - target: {fileID: 1643445149, guid: f1efab439e1a94f0da32676cc381f0f5, type: 3}
+      propertyPath: spellSpawn
+      value: 
+      objectReference: {fileID: 1581985479}
+    - target: {fileID: 1643445149, guid: f1efab439e1a94f0da32676cc381f0f5, type: 3}
+      propertyPath: spellDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1643445149, guid: f1efab439e1a94f0da32676cc381f0f5, type: 3}
+      propertyPath: timeBetweenAttacks
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f1efab439e1a94f0da32676cc381f0f5, type: 3}
 --- !u!1 &1795988842
 GameObject:
   m_ObjectHideFlags: 0
