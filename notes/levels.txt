@@ -1,0 +1,13 @@
+Level 1 - Ground 
+  Default Spell
+  Lightning Spell
+
+Level 2 - Fire
+  Fireball Spell
+  Fire AOE Spell
+
+Level 4 - Earth/Plants/Posion
+  Heal Spell
+  Posion Cloud DoT
+
+Level 5 - Boss
