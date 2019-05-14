@@ -19,7 +19,7 @@ public class EnemyHealth : MonoBehaviour
         currentHealth = startingHealth;
     }
 
-    public void TakeDamage (int amount, Vector3 hitPoint)
+    public void TakeDamage (int amount) //, Vector3 hitPoint)
     {
         if (isDead)
             return;
@@ -30,7 +30,7 @@ public class EnemyHealth : MonoBehaviour
         }
         else { anim.SetTrigger("Hit"); }
     }
-
+   
 
     void Death ()
     {
@@ -40,8 +40,7 @@ public class EnemyHealth : MonoBehaviour
         GetComponent<UnityEngine.AI.NavMeshAgent>().enabled = false;
         Destroy(gameObject, 5f);
 
-
         // Set Player attack to Snowball
-        playerAttack.activeSpell = (int)Spells.snowball;
+        playerAttack.activeLeft = (int)Spells.BallProj;
     }
 }

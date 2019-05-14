@@ -16,8 +16,7 @@ public class EnemyAttack : MonoBehaviour
     bool playerInRange;
     float timer;
 
-    public GameObject snowball;
-    public Transform spellSpawn;
+    public BallSpell ballSpell;
     public int spellDistance;
 
 
@@ -27,7 +26,7 @@ public class EnemyAttack : MonoBehaviour
         playerHealth = player.GetComponent <PlayerHealth> ();
         enemyHealth = GetComponent<EnemyHealth>();
         anim = GetComponent <Animator> ();
-        snowballHitbox = snowball.GetComponent<SphereCollider>();
+        snowballHitbox = ballSpell.projObject.GetComponent<SphereCollider>();
         playerHitbox = GetComponent<CapsuleCollider>();
     }
 
@@ -84,27 +83,16 @@ public class EnemyAttack : MonoBehaviour
 
             if (attackAnim == "Attack01")
             {
-                Instantiate(snowball, spellSpawn.position, spellSpawn.rotation);
+                Instantiate(ballSpell.projObject, 
+                            ballSpell.spellSpawn.position, 
+                            ballSpell.spellSpawn.rotation);
             }
-
-            /*
-            if (snowballHitbox.bounds.Intersects(playerHitbox.bounds))
-            {
-                playerHealth.TakeDamage(10);
-            }
-            */
 
             if (attackAnim != "Attack01")
             {
                 playerHealth.TakeDamage(attackDamage);
             }
 
-            /*
-            if (Vector3.Distance(transform.position, player.transform.position) < 10)
-            {
-                
-            }
-            */
         }
     }
 }
