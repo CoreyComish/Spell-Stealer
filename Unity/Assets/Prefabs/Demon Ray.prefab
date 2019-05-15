@@ -1,12 +1,12 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!54 &1886812569
+--- !u!54 &978629216697312685
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 438866832403970949}
+  m_GameObject: {fileID: 8795744259484534174}
   serializedVersion: 2
   m_Mass: 25
   m_Drag: Infinity
@@ -16,13 +16,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &1886812568
+--- !u!136 &978629216697312684
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 438866832403970949}
+  m_GameObject: {fileID: 8795744259484534174}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
@@ -30,60 +30,13 @@ CapsuleCollider:
   m_Height: 5
   m_Direction: 1
   m_Center: {x: 0, y: 2.5, z: 0}
---- !u!114 &1886812565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 438866832403970949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e7d441615a8043a3a93a9b37c0c3caa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyDirection: {x: 0, y: 0, z: 0}
---- !u!114 &1886812566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 438866832403970949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88155ffd5cad6462ba010bdb30d3a855, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  sinkSpeed: 2.5
---- !u!114 &1886812567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 438866832403970949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46d7928946ac149079d7e865fb524121, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeBetweenAttacks: 2
-  attackDamage: 10
-  attackAnim: Attack01
-  snowball: {fileID: 7320790777012984211, guid: 1d0192bf20eeb4b1b8efb1d087797922,
-    type: 3}
-  spellSpawn: {fileID: 437769102948425707}
-  spellDistance: 20
---- !u!195 &1886812570
+--- !u!195 &978629216697312656
 NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 438866832403970949}
+  m_GameObject: {fileID: 8795744259484534174}
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.3
@@ -99,7 +52,58 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!1001 &437769103516013617
+--- !u!114 &978629216697312657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8795744259484534174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7928946ac149079d7e865fb524121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenAttacks: 1
+  attackDamage: 10
+  attackAnim: Attack02
+  ballSpell:
+    range: 0
+    damage: 0
+    spellType: 0
+    spellSpawn: {fileID: 0}
+    projObject: {fileID: 0}
+  castRange: 0
+--- !u!114 &978629216697312658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8795744259484534174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88155ffd5cad6462ba010bdb30d3a855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 100
+  currentHealth: 0
+  sinkSpeed: 2.5
+  playerAttack: {fileID: 0}
+--- !u!114 &978629216697312659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8795744259484534174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e7d441615a8043a3a93a9b37c0c3caa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyDirection: {x: 0, y: 0, z: 0}
+--- !u!1001 &8796846653346998826
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -108,7 +112,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1248638086229940, guid: d68dfe968bb015f4a81065dc300d5c7b, type: 3}
       propertyPath: m_Name
-      value: Demon Blade Lord A Variant
+      value: Demon Ray
       objectReference: {fileID: 0}
     - target: {fileID: 1248638086229940, guid: d68dfe968bb015f4a81065dc300d5c7b, type: 3}
       propertyPath: m_Layer
@@ -116,15 +120,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4772241058340664, guid: d68dfe968bb015f4a81065dc300d5c7b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 17.750221
       objectReference: {fileID: 0}
     - target: {fileID: 4772241058340664, guid: d68dfe968bb015f4a81065dc300d5c7b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.21973896
       objectReference: {fileID: 0}
     - target: {fileID: 4772241058340664, guid: d68dfe968bb015f4a81065dc300d5c7b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6
+      value: 18.362686
       objectReference: {fileID: 0}
     - target: {fileID: 4772241058340664, guid: d68dfe968bb015f4a81065dc300d5c7b, type: 3}
       propertyPath: m_LocalRotation.x
@@ -164,21 +168,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4772241058340664, guid: d68dfe968bb015f4a81065dc300d5c7b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4772241058340664, guid: d68dfe968bb015f4a81065dc300d5c7b, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1323816385367500, guid: d68dfe968bb015f4a81065dc300d5c7b, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 95610678145862172, guid: d68dfe968bb015f4a81065dc300d5c7b,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 7b09a89b5f7313246ae3559c61cf49fe, type: 2}
-    - target: {fileID: 1323816385367500, guid: d68dfe968bb015f4a81065dc300d5c7b, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 1053703740775942, guid: d68dfe968bb015f4a81065dc300d5c7b, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -413,15 +417,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d68dfe968bb015f4a81065dc300d5c7b, type: 3}
---- !u!1 &438866832403970949 stripped
+--- !u!1 &8795744259484534174 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1248638086229940, guid: d68dfe968bb015f4a81065dc300d5c7b,
     type: 3}
-  m_PrefabInstance: {fileID: 437769103516013617}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &437769102948425707 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 643255258, guid: d68dfe968bb015f4a81065dc300d5c7b,
-    type: 3}
-  m_PrefabInstance: {fileID: 437769103516013617}
+  m_PrefabInstance: {fileID: 8796846653346998826}
   m_PrefabAsset: {fileID: 0}

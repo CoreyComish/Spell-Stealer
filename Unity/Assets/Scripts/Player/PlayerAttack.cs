@@ -5,7 +5,8 @@ using System.Collections;
 enum Spells
 {
     LightRay,
-    BallProj
+    BallProj,
+    BasicHeal
 }
 
 // Spell superclass
@@ -13,7 +14,6 @@ enum Spells
 public class Spell
 {
     public int range;
-    public int damage;
     public int spellType;
 }
 
@@ -27,6 +27,8 @@ public class RaySpell : Spell
     public Vector3 pos;
     public Light spellLight;
     public float effectsDisplayTime;
+
+    public int damage;
 
     public void ShootRay(Transform player_trans, int shootableMask)
     {
@@ -99,6 +101,38 @@ public class LightRay : RaySpell
 
 }
 
+// 3. Basic Heal
+[System.Serializable]
+public class BasicHeal : Spell
+{
+    public int amountHealed;
+    public GameObject target;
+
+    public BasicHeal(GameObject target)
+    {
+        range = 0;
+        spellType = 3;
+        amountHealed = 10;
+        this.target = target;
+    }
+
+    public void CastHeal()
+    {
+        if (target.tag == "Player")
+        {
+            PlayerHealth ph = target.GetComponent<PlayerHealth>();
+            ph.Heal(amountHealed);
+        }
+
+        else if (target.tag == "Enemy")
+        {
+            EnemyHealth eh = target.gameObject.GetComponent<EnemyHealth>();
+            eh.Heal(amountHealed);
+        }
+
+    }
+}
+
 public class PlayerAttack : MonoBehaviour
 {
     // General Properties
@@ -111,23 +145,27 @@ public class PlayerAttack : MonoBehaviour
     public int activeLeft;
     public LightRay lightRay;
     public BallSpell ballSpell;
+    public BasicHeal basicHeal;
 
-    public GameObject snowball;
-
+    // Seems like we need to define this here. I can't figure out how to 
+    // properly set the class object from Unity.
+    public GameObject ballSpellPrefab;
 
     void Awake()
     {
         // General Properties
         shootableMask = LayerMask.GetMask("Shootable");
         anim = GetComponent<Animator>();
-        //activeLeft = (int)Spells.LightRay;
-        activeLeft = (int)Spells.BallProj;
+        activeLeft = (int)Spells.LightRay;
+        //activeLeft = (int)Spells.BallProj;
+        //activeLeft = (int)Spells.BasicHeal;
 
         // Initalize Spell Class Instances
         lightRay = new LightRay(this.gameObject);
         ballSpell = new BallSpell(this.gameObject);
+        ballSpell.projObject = ballSpellPrefab;
+        basicHeal = new BasicHeal(this.gameObject);
     }
-
 
     void Update ()
     {
@@ -137,17 +175,22 @@ public class PlayerAttack : MonoBehaviour
         {
             anim.SetBool("AttackL", true);
 
-            if (activeLeft == (int)Spells.LightRay)
+            switch (activeLeft)
             {
-                lightRay.ShootRay(transform, shootableMask);
-            }
+                case (int)Spells.LightRay:
+                    lightRay.ShootRay(transform, shootableMask);
+                    break;
 
-            else if (activeLeft == (int)Spells.BallProj)
-            {
-                // Instantiate(ballSpell.projObject, 
-                Instantiate(snowball,
-                            ballSpell.spellSpawn.position,
-                            ballSpell.spellSpawn.rotation);
+                case (int)Spells.BallProj:
+                    // Instantiate(ballSpell.projObject, 
+                    Instantiate(ballSpell.projObject,
+                                ballSpell.spellSpawn.position,
+                                ballSpell.spellSpawn.rotation);
+                    break;
+
+                case (int)Spells.BasicHeal:
+                    basicHeal.CastHeal();
+                    break;
             }
 
             timer = 0;
