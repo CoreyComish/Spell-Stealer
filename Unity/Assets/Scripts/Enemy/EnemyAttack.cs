@@ -1,60 +1,50 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+enum Enemies
+{
+    DemonProjectile,
+    DemonHeal,
+    DemonAOE,
+    DemonRay
+}
+
 public class EnemyAttack : MonoBehaviour
 {
-    public float timeBetweenAttacks = 0.5f;
-    public int attackDamage = 10;
+
+    public int demonType;
+
+    public float timeBetweenAttacks;
     public string attackAnim = "Attack01";
 
     Animator anim;
     GameObject player;
-    PlayerHealth playerHealth;
     EnemyHealth enemyHealth;
-    SphereCollider snowballHitbox;
-    CapsuleCollider playerHitbox;
     bool playerInRange;
     float timer;
 
-    public GameObject snowball;
-    public Transform spellSpawn;
-    public int spellDistance;
+    public BallSpell ballSpell;
+    public BasicHeal basicHeal;
+
+    public int castRange;
+
 
 
     void Awake ()
     {
         player = GameObject.FindGameObjectWithTag ("Player");
-        playerHealth = player.GetComponent <PlayerHealth> ();
         enemyHealth = GetComponent<EnemyHealth>();
         anim = GetComponent <Animator> ();
-        snowballHitbox = snowball.GetComponent<SphereCollider>();
-        playerHitbox = GetComponent<CapsuleCollider>();
-    }
 
-    /*
-    void OnTriggerEnter (Collider other)
-    {
-        if(other.gameObject == player)
-        {
-            playerInRange = true;
-        }
+        //ballSpell = new BallSpell(this.gameObject);
+        basicHeal = new BasicHeal(this.gameObject);
     }
-
-
-    void OnTriggerExit (Collider other)
-    {
-        if(other.gameObject == player)
-        {
-            playerInRange = false;
-        }
-    }
-    */
 
     void Update ()
     {
         timer += Time.deltaTime;
 
-        if (Vector3.Distance(transform.position, player.transform.position) < spellDistance)
+        if (Vector3.Distance(transform.position, player.transform.position) < castRange)
         {
             playerInRange = true;
         }
@@ -68,43 +58,28 @@ public class EnemyAttack : MonoBehaviour
             Attack ();
         }
 
-        if (playerHealth.currentHealth <= 0)
-        {
-            anim.SetTrigger ("PlayerDead");
-        }
     }
 
     void Attack ()
     {
         timer = 0f;
 
-        if(playerHealth.currentHealth > 0)
+        anim.SetTrigger(attackAnim);
+
+        if (demonType == (int)Enemies.DemonProjectile)
         {
-            anim.SetTrigger(attackAnim);
-
-            if (attackAnim == "Attack01")
-            {
-                Instantiate(snowball, spellSpawn.position, spellSpawn.rotation);
-            }
-
-            /*
-            if (snowballHitbox.bounds.Intersects(playerHitbox.bounds))
-            {
-                playerHealth.TakeDamage(10);
-            }
-            */
-
-            if (attackAnim != "Attack01")
-            {
-                playerHealth.TakeDamage(attackDamage);
-            }
-
-            /*
-            if (Vector3.Distance(transform.position, player.transform.position) < 10)
-            {
-                
-            }
-            */
+            Instantiate(ballSpell.projObject,
+                ballSpell.spellSpawn.position,
+                ballSpell.spellSpawn.rotation);
         }
+
+        else if (demonType == (int)Enemies.DemonHeal)
+        {
+            basicHeal.CastHeal();
+        }
+
+        else print("ERROR, not valid demonType, Attack");
+
     }
 }
+
