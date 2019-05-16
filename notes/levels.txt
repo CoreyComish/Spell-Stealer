@@ -1,13 +1,55 @@
+Level 0 - Base
+
+  Enemies:
+    None
+
+  Spells:
+    Ray:  Default Light Ray
+
+  Description: 
+    Player start, with portals to other levels
+
+
 Level 1 - Ground 
-  Default Spell
-  Lightning Spell
+
+  Enemies:
+    ??
+    ??
+
+  Spells
+    Proj: Lightning Ball 
+    Ray: Lightning Bolt
+
+  Description:
 
 Level 2 - Fire
-  Fireball Spell
-  Fire AOE Spell
 
-Level 4 - Earth/Plants/Posion
-  Heal Spell
-  Posion Cloud DoT
+  Enemies:
+    ??
+    ??
+
+  Spells:
+    Proj: FireBall
+    AOE:  Fire Ring
+
+  Description:
+
+Level 3 - Earth/Plants/Posion
+
+  Enemies:
+    ??
+    ??
+
+  Spells:
+    Heal: Heal Spell
+    AOE: Posion DoT
+
+  Description:
 
 Level 5 - Boss
+  
+  Enemy:
+    ??
+
+  Spells:
+    Maybe boss spawns previous enemies, allowing access to array of spells
