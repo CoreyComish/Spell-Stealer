@@ -13,8 +13,6 @@ public class EnemyHealth : MonoBehaviour
     Animator anim;
     CapsuleCollider capsuleCollider;
     bool isDead;
-    Color enemySpellMat;
-    Shader playerSpellMat;
 
     void Awake ()
     {
@@ -50,8 +48,7 @@ public class EnemyHealth : MonoBehaviour
         capsuleCollider.isTrigger = true;
         anim.SetTrigger ("Dead");
         GetComponent<UnityEngine.AI.NavMeshAgent>().enabled = false;
-        enemySpellMat = enemyAttack.ballSpell.projObject.GetComponent<Renderer>().sharedMaterial.color;
-        playerSpellMat = playerAttack.ballSpell.projObject.GetComponent<Renderer>().sharedMaterial.shader;
+        Color enemySpellMat = enemyAttack.ballSpell.projObject.GetComponent<Renderer>().sharedMaterial.color;
         Destroy(gameObject, 5f);
 
         // Change Player Attack
