@@ -19,7 +19,6 @@ public class EnemyHealth : MonoBehaviour
         anim = GetComponent <Animator> ();
         capsuleCollider = GetComponent <CapsuleCollider> ();
         currentHealth = startingHealth;
-        GameObject enemy = GameObject.FindWithTag("Enemy");
     }
 
     public void TakeDamage (int amount) //, Vector3 hitPoint)
