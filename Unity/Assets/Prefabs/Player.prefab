@@ -1324,6 +1324,7 @@ GameObject:
   - component: {fileID: 4179045274637552714}
   - component: {fileID: 4179045274637552716}
   - component: {fileID: 4179045274637552704}
+  - component: {fileID: 1012082904}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1340,7 +1341,7 @@ Transform:
   m_GameObject: {fileID: 4179045274489680971}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.02, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 4179045274489776497}
   - {fileID: 4179045274489776143}
@@ -1576,12 +1577,12 @@ Rigidbody:
   m_GameObject: {fileID: 4179045274489680971}
   serializedVersion: 2
   m_Mass: 15
-  m_Drag: 3
-  m_AngularDrag: 0.05
+  m_Drag: Infinity
+  m_AngularDrag: Infinity
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
 --- !u!136 &4179045274637552715
 CapsuleCollider:
@@ -1746,18 +1747,22 @@ MonoBehaviour:
   activeLeft: 0
   lightRay:
     range: 10
-    damage: 10
     spellType: 0
     spellLine: {fileID: 4179045274637552717}
     pos: {x: 0, y: 0, z: 0}
     spellLight: {fileID: 4179045274637552711}
     effectsDisplayTime: 0
+    damage: 20
   ballSpell:
     range: 10
-    damage: 10
     spellType: 1
     spellSpawn: {fileID: 4179045274489776241}
     projObject: {fileID: 0}
+  basicHeal:
+    range: 0
+    spellType: 0
+    amountHealed: 0
+    target: {fileID: 0}
   ballSpellPrefab: {fileID: 6977888493298708599, guid: 8eeb785982c8b42779485348d8ea7d2f,
     type: 3}
 --- !u!114 &4179045274637552716
@@ -1773,11 +1778,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 100
-  currentHealth: 100
+  currentHealth: 0
   healthSlider: {fileID: 0}
   damageImage: {fileID: 0}
+  healImage: {fileID: 0}
   flashSpeed: 5
-  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
+  damageflashColor: {r: 1, g: 0, b: 0, a: 0.1}
+  healflashColor: {r: 0, g: 1, b: 0, a: 0.1}
 --- !u!114 &4179045274637552704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1791,6 +1798,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!64 &1012082904
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4179045274489680971}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 0}
 --- !u!1 &4179045274489680977
 GameObject:
   m_ObjectHideFlags: 0
@@ -3402,7 +3423,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4179045274489776297
 Transform:
@@ -4408,7 +4429,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4179045274489776465
 Transform:
@@ -5240,7 +5261,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4179045274489776361
 Transform:
@@ -8188,7 +8209,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4179045274489776399
 Transform:
