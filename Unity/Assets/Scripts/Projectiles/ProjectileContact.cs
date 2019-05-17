@@ -12,7 +12,6 @@ public class ProjectileContact : MonoBehaviour
     void Awake()
     {
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
-        enemyHealth = GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyHealth>();
     }
 
 
@@ -21,6 +20,7 @@ public class ProjectileContact : MonoBehaviour
         if (other.tag == "Enemy" && source == "Player")
         {
             print("Enemy HIT!");
+            enemyHealth = other.GetComponent<EnemyHealth>();
             enemyHealth.TakeDamage(30);
             Destroy(gameObject);
            
