@@ -13,21 +13,17 @@ public class EnemyAttack : MonoBehaviour
 {
 
     public int demonType;
-
     public float timeBetweenAttacks;
     public string attackAnim = "Attack01";
+    public BallSpell ballSpell;
+    public BasicHeal basicHeal;
+    public int castRange;
 
     Animator anim;
     GameObject player;
     EnemyHealth enemyHealth;
     bool playerInRange;
     float timer;
-
-    public BallSpell ballSpell;
-    public BasicHeal basicHeal;
-
-    public int castRange;
-
 
 
     void Awake ()

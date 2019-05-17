@@ -4,22 +4,24 @@ public class EnemyHealth : MonoBehaviour
 {
 
     public int demonType;
-
     public int startingHealth = 100;
     public int currentHealth;
     public float sinkSpeed = 0.5f;
+    public PlayerAttack playerAttack;
+    public EnemyAttack enemyAttack;
 
     Animator anim;
     CapsuleCollider capsuleCollider;
     bool isDead;
-
-    public PlayerAttack playerAttack;
+    Color enemySpellMat;
+    Shader playerSpellMat;
 
     void Awake ()
     {
         anim = GetComponent <Animator> ();
         capsuleCollider = GetComponent <CapsuleCollider> ();
         currentHealth = startingHealth;
+        GameObject enemy = GameObject.FindWithTag("Enemy");
     }
 
     public void TakeDamage (int amount) //, Vector3 hitPoint)
@@ -48,12 +50,15 @@ public class EnemyHealth : MonoBehaviour
         capsuleCollider.isTrigger = true;
         anim.SetTrigger ("Dead");
         GetComponent<UnityEngine.AI.NavMeshAgent>().enabled = false;
+        enemySpellMat = enemyAttack.ballSpell.projObject.GetComponent<Renderer>().sharedMaterial.color;
+        playerSpellMat = playerAttack.ballSpell.projObject.GetComponent<Renderer>().sharedMaterial.shader;
         Destroy(gameObject, 5f);
 
         // Change Player Attack
         switch (demonType)
         {
             case (int)Enemies.DemonProjectile:
+                playerAttack.ballSpell.projObject.GetComponent<Renderer>().sharedMaterial.SetColor("_Color", enemySpellMat);
                 playerAttack.activeLeft = (int)Spells.BallProj;
                 print("STOLE PROJECTILE");
                 break;

@@ -62,7 +62,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            anim.SetTrigger("PlayerDead");
+            anim.SetTrigger("Die");
         }
     }
 
