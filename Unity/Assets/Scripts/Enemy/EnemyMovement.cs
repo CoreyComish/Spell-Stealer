@@ -9,6 +9,7 @@ public class EnemyMovement : MonoBehaviour
     EnemyHealth enemyHealth;
     UnityEngine.AI.NavMeshAgent nav;
     public Vector3 enemyDirection;
+    public int aggroRange;
 
 
     void Awake ()
@@ -18,15 +19,19 @@ public class EnemyMovement : MonoBehaviour
         enemyHealth = GetComponent <EnemyHealth> ();
         nav = GetComponent <UnityEngine.AI.NavMeshAgent> ();
         anim = GetComponent<Animator>();
+        anim.SetBool("Moving", false);
     }
 
 
     void Update ()
     {
-        if(enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
+        if (enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
         {
-            nav.SetDestination (player.position);
-            enemyDirection = transform.forward;
+            if (Vector3.Distance(transform.position, player.transform.position) <= aggroRange)
+            {
+                nav.SetDestination(player.position);
+                enemyDirection = transform.forward;
+            }
         }
         else
         {

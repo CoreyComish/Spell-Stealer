@@ -92,7 +92,7 @@ public class LightRay : RaySpell
     public LightRay(GameObject player)
     {
         damage = 20;
-        range = 100;
+        range = 15;
         effectsDisplayTime = 0.15f;
         spellLine = player.GetComponent<LineRenderer>();
         spellLight = player.GetComponent<Light>();

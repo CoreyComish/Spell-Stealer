@@ -68,6 +68,7 @@ public class EnemyAttack : MonoBehaviour
 
         if (demonType == (int)Enemies.DemonProjectile)
         {
+            ballSpell.spellSpawn.position += new Vector3(0, 1, 0);
             Instantiate(ballSpell.projObject,
                 ballSpell.spellSpawn.position,
                 ballSpell.spellSpawn.rotation);
