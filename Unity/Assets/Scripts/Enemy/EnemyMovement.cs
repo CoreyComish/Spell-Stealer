@@ -29,6 +29,7 @@ public class EnemyMovement : MonoBehaviour
         {
             if (Vector3.Distance(transform.position, player.transform.position) <= aggroRange || enemyHealth.currentHealth < enemyHealth.startingHealth)
             {
+                anim.SetBool("Moving", true);
                 nav.SetDestination(player.position);
                 enemyDirection = transform.forward;
             }
