@@ -17,10 +17,10 @@ public class EnemyAttack : MonoBehaviour
 
     void Awake ()
     {
-        player = GameObject.FindGameObjectWithTag ("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
         enemyHealth = GetComponent<EnemyHealth>();
         anim = GetComponent <Animator> ();
-        spellProj.GetComponent<ProjectileContact>().source = "Enemy";
+        if (spellProj.name != "Melee") { spellProj.GetComponent<ProjectileContact>().source = "Enemy"; }
     }
 
     void Update ()
@@ -45,10 +45,19 @@ public class EnemyAttack : MonoBehaviour
 
     void Attack ()
     {
-        spellProj.GetComponent<ProjectileContact>().source = "Enemy";
-        anim.SetTrigger(attackAnim);
-        timer = 0f;
-        Instantiate(spellProj, transform.position + spellSpawn, transform.rotation);
+        if (spellProj.name == "Melee")
+        {
+            anim.SetTrigger(attackAnim);
+            timer = 0f;
+            player.GetComponent<PlayerHealth>().TakeDamage(damage);
+        }
+        else
+        {
+            spellProj.GetComponent<ProjectileContact>().source = "Enemy";
+            anim.SetTrigger(attackAnim);
+            timer = 0f;
+            Instantiate(spellProj, transform.position + spellSpawn, transform.rotation);
+        }
     }
 }
 

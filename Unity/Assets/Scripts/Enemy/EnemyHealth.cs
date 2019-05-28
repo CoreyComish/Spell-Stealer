@@ -36,24 +36,28 @@ public class EnemyHealth : MonoBehaviour
         capsuleCollider.isTrigger = true;
         anim.SetTrigger ("Dead");
         GetComponent<UnityEngine.AI.NavMeshAgent>().enabled = false;
-        Destroy(gameObject, 5f);
 
         // Change Player Attack
-        if (action == "left")
+        if (enemyAttack.spellProj.name != "Melee")
         {
-            enemyAttack.spellProj.GetComponent<ProjectileContact>().source = "Player";
-            playerAttack.l_spellProj = enemyAttack.spellProj;
-            playerAttack.l_damage = enemyAttack.damage;
-            playerAttack.l_timeBetweenAttacks = enemyAttack.timeBetweenAttacks;
-            playerAttack.l_range = enemyAttack.range;
+
+            if (action == "left")
+            {
+                enemyAttack.spellProj.GetComponent<ProjectileContact>().source = "Player";
+                playerAttack.l_spellProj = enemyAttack.spellProj;
+                playerAttack.l_damage = enemyAttack.damage;
+                playerAttack.l_timeBetweenAttacks = enemyAttack.timeBetweenAttacks;
+                playerAttack.l_range = enemyAttack.range;
+            }
+            else
+            {
+                enemyAttack.spellProj.GetComponent<ProjectileContact>().source = "Player";
+                playerAttack.r_spellProj = enemyAttack.spellProj;
+                playerAttack.r_damage = enemyAttack.damage;
+                playerAttack.r_timeBetweenAttacks = enemyAttack.timeBetweenAttacks;
+                playerAttack.r_range = enemyAttack.range;
+            }
         }
-        else
-        {
-            enemyAttack.spellProj.GetComponent<ProjectileContact>().source = "Player";
-            playerAttack.r_spellProj = enemyAttack.spellProj;
-            playerAttack.r_damage = enemyAttack.damage;
-            playerAttack.r_timeBetweenAttacks = enemyAttack.timeBetweenAttacks;
-            playerAttack.r_range = enemyAttack.range;
-        }
+        Destroy(gameObject, 5f);
     }
 }
