@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int startingHealth = 50;
+    public int startingHealth = 100;
     public int currentHealth;
     public Slider healthSlider;
     public Image damageImage;
@@ -89,7 +89,6 @@ public class PlayerHealth : MonoBehaviour
     void Death ()
     {
         isDead = true;
-        playerAttack.DisableAllEffects();
         anim.SetTrigger ("Die");
         playerMovement.enabled = false;
         playerAttack.enabled = false;

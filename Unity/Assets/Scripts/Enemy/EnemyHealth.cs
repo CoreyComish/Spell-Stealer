@@ -2,14 +2,11 @@
 
 public class EnemyHealth : MonoBehaviour
 {
-
-    public int demonType;
     public int startingHealth = 100;
     public int currentHealth;
     public float sinkSpeed = 0.5f;
     public PlayerAttack playerAttack;
     public EnemyAttack enemyAttack;
-
     Animator anim;
     CapsuleCollider capsuleCollider;
     bool isDead;
@@ -21,63 +18,42 @@ public class EnemyHealth : MonoBehaviour
         currentHealth = startingHealth;
     }
 
-    public void TakeDamage (int amount) //, Vector3 hitPoint)
+    public void TakeDamage(int amount, string action)
     {
         if (isDead)
             return;
         currentHealth -= amount;
         if (currentHealth <= 0)
         {
-            Death();
+            Death(action);
         }
         else { anim.SetTrigger("Hit"); }
     }
 
-    public void Heal (int amount)
-    {
-        // We can add heal animations and such here later
-        // And maybe a slider?
-        currentHealth = Mathf.Min(currentHealth + amount, startingHealth);
-    }
-
-
-    void Death ()
+    void Death (string action)
     {
         isDead = true;
         capsuleCollider.isTrigger = true;
         anim.SetTrigger ("Dead");
         GetComponent<UnityEngine.AI.NavMeshAgent>().enabled = false;
-        Color enemySpellMat = enemyAttack.ballSpell.projObject.GetComponent<Renderer>().sharedMaterial.color;
         Destroy(gameObject, 5f);
 
         // Change Player Attack
-        switch (demonType)
+        if (action == "left")
         {
-            case (int)Enemies.DemonProjectile:
-                playerAttack.ballSpell.projObject.GetComponent<Renderer>().sharedMaterial.SetColor("_Color", enemySpellMat);
-                playerAttack.activeLeft = (int)Spells.BallProj;
-                print("STOLE PROJECTILE");
-                break;
-
-            case (int)Enemies.DemonHeal:
-                playerAttack.activeLeft = (int)Spells.BasicHeal;
-                print("STOLE HEAL");
-                break;
-
-            case (int)Enemies.DemonRay:
-                playerAttack.activeLeft = (int)Spells.LightRay;
-                print("STOLE RAY");
-                break;
-
-            case (int)Enemies.DemonAOE:
-                playerAttack.activeLeft = (int)Spells.LightRay;
-                print("STOLE AOE");
-                break;
-
-            default:
-                print("ERROR, not valid Demon Type Death");
-                break;
+            enemyAttack.spellProj.GetComponent<ProjectileContact>().source = "Player";
+            playerAttack.l_spellProj = enemyAttack.spellProj;
+            playerAttack.l_damage = enemyAttack.damage;
+            playerAttack.l_timeBetweenAttacks = enemyAttack.timeBetweenAttacks;
+            playerAttack.l_range = enemyAttack.range;
         }
-
+        else
+        {
+            enemyAttack.spellProj.GetComponent<ProjectileContact>().source = "Player";
+            playerAttack.r_spellProj = enemyAttack.spellProj;
+            playerAttack.r_damage = enemyAttack.damage;
+            playerAttack.r_timeBetweenAttacks = enemyAttack.timeBetweenAttacks;
+            playerAttack.r_range = enemyAttack.range;
+        }
     }
 }

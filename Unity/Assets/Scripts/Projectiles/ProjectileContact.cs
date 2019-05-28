@@ -6,12 +6,16 @@ public class ProjectileContact : MonoBehaviour
 {
     EnemyHealth enemyHealth;
     PlayerHealth playerHealth;
+    EnemyAttack enemyAttack;
+    PlayerAttack playerAttack;
     public string source;
 
     // THis probably needs to be split into two different classes for Player/Enemy projectiles
     void Awake()
     {
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+        enemyAttack = GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyAttack>();
+        playerAttack = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAttack>();
     }
 
 
@@ -21,15 +25,21 @@ public class ProjectileContact : MonoBehaviour
         {
             print("Enemy HIT!");
             enemyHealth = other.GetComponent<EnemyHealth>();
-            enemyHealth.TakeDamage(30);
-            Destroy(gameObject);
-           
+            if (playerAttack.l == true)
+            {
+                enemyHealth.TakeDamage(playerAttack.l_damage, "left");
+                Destroy(gameObject);
+            }
+            else
+            {
+                enemyHealth.TakeDamage(playerAttack.r_damage, "right");
+                Destroy(gameObject);
+            }
         }
 
-        // Need to set damage based on projectile damage
         if (other.tag == "Player" && source == "Enemy")
         {
-            playerHealth.TakeDamage(10);
+            playerHealth.TakeDamage(enemyAttack.damage);
             Destroy(gameObject);
         }
 

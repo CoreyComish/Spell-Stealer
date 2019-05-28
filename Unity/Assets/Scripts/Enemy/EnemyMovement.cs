@@ -11,7 +11,6 @@ public class EnemyMovement : MonoBehaviour
     public Vector3 enemyDirection;
     public int aggroRange;
 
-
     void Awake ()
     {
         player = GameObject.FindGameObjectWithTag ("Player").transform;
@@ -21,7 +20,6 @@ public class EnemyMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         anim.SetBool("Moving", false);
     }
-
 
     void Update ()
     {
