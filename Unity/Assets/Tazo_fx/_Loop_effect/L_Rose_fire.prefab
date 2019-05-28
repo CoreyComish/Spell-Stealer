@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: 5998367074689097927}
   - component: {fileID: 7794303680797561951}
   - component: {fileID: 1286912030033571792}
-  - component: {fileID: 1493360524978642930}
   - component: {fileID: 2466039305404211743}
   - component: {fileID: 8668234551516828903}
+  - component: {fileID: 5670891081474515431}
   m_Layer: 0
   m_Name: L_Rose_fire
   m_TagString: TAZOFX
@@ -4864,19 +4864,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7.5
---- !u!114 &1493360524978642930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2868b235bd6b4a6a85fc373c008a8a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lifetime: 5
 --- !u!222 &2466039305404211743
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4914,6 +4901,18 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &5670891081474515431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80dece9ee5167441684aeb6d92ef0e48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &100002
 GameObject:
   m_ObjectHideFlags: 0
