@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Collections;
 
@@ -18,6 +19,8 @@ public class PlayerAttack : MonoBehaviour
     Vector3 spellSpawn = new Vector3(0f, 2f, 0f);
     public bool l;
     public bool r;
+    public Sprite lSpellImage;
+    public Sprite rSpellImage;
 
     void Awake()
     {
@@ -30,6 +33,11 @@ public class PlayerAttack : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
+        GameObject lSpellUI = GameObject.Find("Left Spell");
+        lSpellUI.GetComponent<Image>().sprite = l_spellProj.GetComponent<Image>().sprite;
+        GameObject rSpellUI = GameObject.Find("Right Spell");
+        rSpellUI.GetComponent<Image>().sprite = r_spellProj.GetComponent<Image>().sprite;
+
 
         if (Input.GetButton("Fire1") && timer >= l_timeBetweenAttacks && Time.timeScale != 0f)
         {
