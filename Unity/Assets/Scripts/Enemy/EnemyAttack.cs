@@ -45,6 +45,7 @@ public class EnemyAttack : MonoBehaviour
 
     void Attack ()
     {
+        spellProj.GetComponent<ProjectileContact>().source = "Enemy";
         anim.SetTrigger(attackAnim);
         timer = 0f;
         Instantiate(spellProj, transform.position + spellSpawn, transform.rotation);

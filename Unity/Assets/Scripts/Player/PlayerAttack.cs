@@ -26,8 +26,6 @@ public class PlayerAttack : MonoBehaviour
     {
         shootableMask = LayerMask.GetMask("Shootable");
         anim = GetComponent<Animator>();
-        l_spellProj.GetComponent<ProjectileContact>().source = "Player";
-        r_spellProj.GetComponent<ProjectileContact>().source = "Player";
     }
 
     void Update()
@@ -43,6 +41,7 @@ public class PlayerAttack : MonoBehaviour
         {
             anim.SetTrigger("AttackL");
             timer = 0f;
+            l_spellProj.GetComponent<ProjectileContact>().source = "Player";
             Instantiate(l_spellProj, transform.position + spellSpawn, transform.rotation);
             l = true;
             r = false;
@@ -51,6 +50,7 @@ public class PlayerAttack : MonoBehaviour
         {
             anim.SetTrigger("AttackR");
             timer = 0f;
+            r_spellProj.GetComponent<ProjectileContact>().source = "Player";
             Instantiate(r_spellProj, transform.position + spellSpawn, transform.rotation);
             r = true;
             l = false;
