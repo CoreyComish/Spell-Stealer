@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7569610798211877838}
   - component: {fileID: 4845446482049625716}
   - component: {fileID: 2854475952410368543}
+  - component: {fileID: 4138150127410572092}
   m_Layer: 0
   m_Name: L_water_essencel(Main Camera_click play)
   m_TagString: TAZOFX
@@ -4869,6 +4870,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4138150127410572092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2868b235bd6b4a6a85fc373c008a8a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 5
 --- !u!1 &100002
 GameObject:
   m_ObjectHideFlags: 0

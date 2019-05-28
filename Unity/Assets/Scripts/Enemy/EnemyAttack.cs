@@ -8,6 +8,7 @@ public class EnemyAttack : MonoBehaviour
     public float timeBetweenAttacks;
     public int damage;
     public int range;
+    public Vector3 spellSpawn;
     Animator anim;
     GameObject player;
     EnemyHealth enemyHealth;
@@ -46,7 +47,6 @@ public class EnemyAttack : MonoBehaviour
     {
         anim.SetTrigger(attackAnim);
         timer = 0f;
-        Vector3 spellSpawn = new Vector3(0f, 1f, 0f);
         Instantiate(spellProj, transform.position + spellSpawn, transform.rotation);
     }
 }

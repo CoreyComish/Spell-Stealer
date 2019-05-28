@@ -15,7 +15,7 @@ public class PlayerAttack : MonoBehaviour
     public float r_timeBetweenAttacks;
     public int r_damage;
     public int r_range;
-    Vector3 spellSpawn = new Vector3(0f, 1f, 0f);
+    Vector3 spellSpawn = new Vector3(0f, 2f, 0f);
     public bool l;
     public bool r;
 
