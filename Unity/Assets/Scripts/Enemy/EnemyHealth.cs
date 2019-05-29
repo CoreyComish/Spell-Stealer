@@ -58,6 +58,6 @@ public class EnemyHealth : MonoBehaviour
                 playerAttack.r_range = enemyAttack.range;
             }
         }
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, 3f);
     }
 }
