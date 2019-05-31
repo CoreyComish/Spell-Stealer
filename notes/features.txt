@@ -2,3 +2,15 @@ Jacob
   - Passive healing
   - Separate L/R cooldowns
   - Optional spell steal (I have an idea for what this could look like)
+  - Enemy health meters (above head)
+  - Boss health meter (bottom of screen)
+  - Enemy pathing 
+    - avoid just kiting  
+    - maybe they stop moving once in spell range
+    - maybe add some randomness to movement
+
+Eric
+  - Need sound - big deal
+  - Looks nice
+
+
