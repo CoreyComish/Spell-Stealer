@@ -39,6 +39,7 @@ public class ProjectileContact : MonoBehaviour
 
         if (other.tag == "Player" && source == "Enemy")
         {
+            Debug.Log(other.material.name);
             playerHealth.TakeDamage(enemyAttack.damage);
             Destroy(gameObject);
         }

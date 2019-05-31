@@ -2954,9 +2954,9 @@ GameObject:
   m_Component:
   - component: {fileID: 149448374}
   - component: {fileID: 149448375}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: BossMob
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3534,9 +3534,9 @@ GameObject:
   m_Component:
   - component: {fileID: 193543388}
   - component: {fileID: 193543389}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: HornetMob (1)
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5477,7 +5477,7 @@ GameObject:
   m_TagString: Env
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!154 &282219240
 TerrainCollider:
@@ -7028,9 +7028,9 @@ GameObject:
   m_Component:
   - component: {fileID: 353050733}
   - component: {fileID: 353050734}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: PlantMob (1)
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7834,9 +7834,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 386673029}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: PlantMob
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14983,9 +14983,9 @@ GameObject:
   m_Component:
   - component: {fileID: 773450546}
   - component: {fileID: 773450547}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: HornetMob
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21373,9 +21373,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1087556784}
-  m_Layer: 10
-  m_Name: Mobs
-  m_TagString: Enemy
+  m_Layer: 0
+  m_Name: Enemies
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
