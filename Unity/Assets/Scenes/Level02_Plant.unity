@@ -41905,6 +41905,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 968297816801794960, guid: 5382151ac152a44bb98e7631cd3e2af7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 968297816801803198, guid: 5382151ac152a44bb98e7631cd3e2af7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 968297816801871016, guid: 5382151ac152a44bb98e7631cd3e2af7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 968297817022201368, guid: 5382151ac152a44bb98e7631cd3e2af7,
         type: 3}
       propertyPath: playerAttack
