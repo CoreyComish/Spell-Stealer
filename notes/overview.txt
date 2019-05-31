@@ -1,0 +1,80 @@
+Level 0 - Base/Hub
+
+  Enemies:
+    None
+
+  Spells:
+    None
+
+  Description: 
+    Player start, with portals/doors to other levels
+
+Level 1 - Dungeon 
+
+  Enemies:
+    ??
+    ??
+    Steam Golem?
+
+  Spells
+    Ray: Lightning Bolt (small damage, small cooldown)
+    Proj: Lightning Ball (big damage, big cooldown)
+    AOE: Lightning Stun Circle (big cooldown, stuns in place for 1 second)
+    Self: Lightning Speed (player runs faster)
+
+  Description:
+
+
+Level 2 - Earth/Plants/Posion
+
+  Spells:
+    Ray: Poison dart DoT (small damage, small cd)
+    AOE: Posion Cloud (big cd, DoT cloud for 1 second)
+    Self: Heal
+
+  Enemies:
+    Plant Monster (Poison Cloud, Melee)
+    Hornet Monster (Poison Dart, Heal)
+    Plant Golem (All)
+
+
+  Description:
+
+Level 3 - Desert 
+
+  Spells:
+    Proj: Web Stun (stuns in place for 1 second) 
+    AOE:  Sandstorm (Damages nearby enemies/players) 
+    Self: Dash (Moves player forward quickly)
+
+  Enemies:
+    Spider: Web Stun, Melee
+    Snake: Dash, Sandstorm 
+    Obsidian Golem: All in level
+
+  Description:
+
+Level 4 - Lava Cave
+
+  Spells:
+    Ray: Flamethrower (small damage, small cooldown)
+    Proj: Fire ball (big damage, big cooldown)
+    AOE: Fire Ring (after 1 second, big damage)
+    Self: Immolate (Damages nearby enemies/players, but also caster)
+
+  Enemies:
+    ?? (Lots of fire/lava assets in the store)
+    ?? 
+    Fire Golem: All in level
+
+
+Level 5 - Boss (Hub World)
+  
+  Spells:
+    No new spells    
+
+  Enemy:
+    Plasma/Dark/Stalagmite Golem: All in Game
+  
+  Description:
+    After completing levels 1-4, a new object appears in the hub world. When the player interacts with that object, the final boss spawns. The doors/portals to the other levels now act as spawn points for enemies from that level. I'm thinking every 25% health from the main boss, he goes into "block mode", and spawns enemies, and we can't damage main boss until all enemies are defeated. Maybe for the last 25% he spawns the 4 golems from the other levels. We can also alter which spells the main boss is able to use depending on which 25% we're in. Maybe "weaker" spells at the beginning, and "stronger" spells at the end.

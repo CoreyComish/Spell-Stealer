@@ -1,0 +1,4 @@
+Jacob
+  - Passive healing
+  - Separate L/R cooldowns
+  - Optional spell steal (I have an idea for what this could look like)
