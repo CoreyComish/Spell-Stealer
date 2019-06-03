@@ -8,6 +8,8 @@ Level 0 - Base/Hub
 
   Description: 
     Player start, with portals/doors to other levels
+    We can do a small tutorial here. Maybe spawn an enemy from one of the gates, and demonstrate how
+      the spell steal mechanic works. This should be done last.
 
 Level 1 - Dungeon 
 
@@ -23,7 +25,6 @@ Level 1 - Dungeon
     Self: Lightning Speed (player runs faster)
 
   Description:
-
 
 Level 2 - Earth/Plants/Posion
 
@@ -54,18 +55,20 @@ Level 3 - Desert
 
   Description:
 
-Level 4 - Lava Cave
 
-  Spells:
-    Ray: Flamethrower (small damage, small cooldown)
-    Proj: Fire ball (big damage, big cooldown)
-    AOE: Fire Ring (after 1 second, big damage)
-    Self: Immolate (Damages nearby enemies/players, but also caster)
+// I think we can get away with not implementing another full level
+//Level 4 - Lava Cave
 
-  Enemies:
-    ?? (Lots of fire/lava assets in the store)
-    ?? 
-    Fire Golem: All in level
+//  Spells:
+//    Ray: Flamethrower (small damage, small cooldown)
+//    Proj: Fire ball (big damage, big cooldown)
+//    AOE: Fire Ring (after 1 second, big damage)
+//    Self: Immolate (Damages nearby enemies/players, but also caster)
+
+//  Enemies:
+//    ?? (Lots of fire/lava assets in the store)
+//    ?? 
+//    Fire Golem: All in level
 
 
 Level 5 - Boss (Hub World)
