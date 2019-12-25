@@ -1,6 +1,6 @@
 # Spell Stealer
 ## Spring 2019 - Game Programming (CIS 410/510)
-## Corey Comish, Jacob Lambert, Bowen Hou
+## Creators: Corey Comish, Jacob Lambert, Bowen Hou
 
 Contents
 -------
@@ -10,3 +10,13 @@ Contents
   * ./Alpha - Deliverables for Alpha build (documents, game executables)
   * ./Beta  - Deliverables for Beta build (documents, game executables)
   * ./Final - Deliverables for Final build (documents, game executables)
+  
+
+**Screenshots**
+-------
+<img src="https://github.com/CoreyComish/Spell-Stealer/blob/master/Screenshots/Forest.png" width="750">
+
+<img src="https://github.com/CoreyComish/Spell-Stealer/blob/master/Screenshots/Desert.png" width="750">
+
+<img src="https://github.com/CoreyComish/Spell-Stealer/blob/master/Screenshots/Dungeon.png" width="750">
+
